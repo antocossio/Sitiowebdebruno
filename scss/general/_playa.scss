@@ -1,0 +1,127 @@
+/* estilo de playa */
+
+/* header */ 
+
+@import "../general/utilidades/mixin";
+
+header {
+    @include flex;
+    nav {
+        a {
+         @include nav;
+        }
+      }
+}
+
+/* main o contenido */
+.container {
+    margin-top: 20px;
+
+    h1 {
+        font-size: 36px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // 2 columnas
+        grid-template-rows: repeat(2, 1fr);    // 2 filas
+        gap: 20px;
+        padding: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Una columna en móviles
+        }
+    }
+
+    .image-item2 {
+        background-color: $color-gris-claro;
+        border: 2px solid $color-azul-dos;
+        border-radius: 10px;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: $color-azul-oscuro;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $color-azul-dos;
+            }
+        }
+    }
+}
+
+//estilo para footer//
+
+footer {
+    text-align: center; /* Alineación centrada en el footer */
+    background-color: #F4F4F4; /* Fondo gris claro */
+
+    /* Íconos de redes sociales */
+    .social-icon {
+      width: 30px; /* Tamaño de los íconos */
+        height: 30px;
+        margin: 0 5px; /* Espaciado entre íconos */}
+
+}
+@media (min-width: 500px) {
+  header {
+      flex-direction:row; /* Cambia a fila para pantallas más grandes */
+  }
+ 
+ 
+  main {
+      
+      flex-direction:row; /* Cambia a fila para pantallas más grandes */
+  }
+
+  .row {
+      padding: 16px;
+      flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+
+  .texto, .imagen {
+      flex: 1; /* Cada parte ocupa un espacio igual */
+      margin: 10; /* Sin márgenes en móviles */
+  }
+
+  .btn {
+      margin:14px;}
+  }

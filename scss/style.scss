@@ -1,0 +1,29 @@
+//import
+
+@import "general/reset";
+
+//import de home//
+@import "general/home";
+
+//import de contato//
+@import "general/contacto";
+
+//import de playa//
+
+@import "general/playa";
+
+//sobre mi //
+
+@import "general/sobremi";
+
+// mis tesoros //
+
+@import "general/mistesoros";
+
+//impotar variables //
+@import "general/utilidades/variables";
+
+@import "general/header";
+
+
+@import"general/utilidades/mixin";

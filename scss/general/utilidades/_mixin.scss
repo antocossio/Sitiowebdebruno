@@ -1,0 +1,12 @@
+//Minxin//
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin nav {
+    display: flex; 
+    padding: 0 16px;
+    color: #333333; /* texto gris oscuro */
+    text-decoration: none;
+}

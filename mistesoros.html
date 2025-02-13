@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Imagenes/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno's Life</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> <!-- Cambios aquí -->
+    <!-- Encabezado del sitio -->
+    <header>
+        <div class="logo">  
+            <a href="index.html">
+                <img src="Imagenes/Logo.png" alt="Logo de Bruno's Life">
+            </a>
+        </div>
+
+        <button id="burger-menu">☰</button>
+        <div class="nav-container">
+            <nav>
+                <a href="mistesoros.html">Juguetes</a>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="playa.html">Playa</a>
+                <a href="contactanos.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container text-center mt-1 flex-grow-1 flex-column justify-content-center align-items-center"> <!-- Cambios aquí -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h1>Mis "Tesoros"</h1>
+                <p>Mis tesoros son mis juguetes favoritos, los que me inspiraron a sonreír y hacer travesuras.</p>
+            </div>
+            <div class="image-item col-md-4"> <!-- Cambios aquí -->
+                <img src="Imagenes/bruno.png" alt="Juguete 1, tiene la capacidad de ser mordido y es de color amarillo" class="img-fluid rounded">
+            </div>
+            <div class="image-item col-md-4"> <!-- Cambios aquí -->
+                <img src="Imagenes/Peluchebruno.png" alt="Juguete 2, jueguete dos parece un mounstruo de forma redonda" class="img-fluid rounded">
+            </div> 
+            <div class="image-item col-md-4"> <!-- Cambios aquí -->
+                <img src="Imagenes/juguetesbruno.png" alt="Juguete 3, es un huesito con la capacidad de sonar muy fuerte" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer class="text-center p-4 bg-light">
+        <h4>Síguenos en</h4>
+        <a href="#"><img src="Imagenes/icongoogle.png" alt="Logo de Google" class="social-icon"/></a>
+        <a href="#"><img src="Imagenes/iconyoutube.png" alt="Logo de YouTube" class="social-icon"/></a>
+        <a href="#"><img src="Imagenes/iconfacebook.png" alt="Logo de Facebook" class="social-icon"/></a>      
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>

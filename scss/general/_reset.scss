@@ -1,0 +1,36 @@
+@import "../general/utilidades/variables";
+
+//import-reset//
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:$color-fondo; /* Fondo blanco */
+    line-height: 1.6; /* Mejora la legibilidad */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+header {
+    
+        height: 80px;
+        background-color: #F4F4F4; /* fondo gris claro */
+        padding: 0 32px;}
+    
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    header a {
+        margin: 0 10px; /* Espaciado entre enlaces */
+        text-decoration: none; /* Sin subrayado en enlaces */
+        color: #486284; /* Color de texto de los enlaces */
+    }
+    
+    header a:hover {
+        text-decoration: underline; /* Subrayado en hover */
+    }
+

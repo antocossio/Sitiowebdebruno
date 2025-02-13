@@ -1,0 +1,79 @@
+/* estilo de contactanos */
+
+/* header */ 
+
+@import "../general/utilidades/mixin";
+
+header {
+    @include flex;
+    nav {
+        a {
+         @include nav;
+        }
+      }
+}
+/* main */
+.container.text-center.mt-5 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 69px 20px; // Relleno de 69px arriba y 20px a los lados
+    padding-bottom: 32px;
+     
+    // estilo para el texto dentro de la clase
+    h1, h2, h3 {
+      color: $color-azul-oscuro;
+      margin-bottom: 0px;
+      font-size: 42px;
+      padding-top: 69px; // Este padding se mantienes
+
+    }
+  
+    p {
+      color: $color-azul-oscuro;
+      font-size: 20px;
+    }
+    
+    .buttons {
+        margin-top: 24px; /* Espacio superior para los botones */
+        display: flex; /* Usar Flexbox para centrar botones */
+        justify-content: center; /* Centra los botones */
+    }
+    
+    .btn {
+        background-color: $color-azul-oscuro; /* Color de fondo azul para los botones */
+        color: white; /* Color del texto blanco */
+        border: none; /* Sin borde */
+        padding: 10px 20px; /* Espaciado interno */
+        border-radius: 30px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        transition: background-color 0.3s; /* Transición suave */
+        margin-right: 16px; /* Espacio entre botones */
+    }
+}
+
+/* Media Queries */
+
+@media (min-width: 500px) {
+    header {
+        flex-direction:row; /* Cambia a fila para pantallas más grandes */
+    }
+   
+   
+    main {
+        
+        flex-direction:row; /* Cambia a fila para pantallas más grandes */
+    }
+
+    .row {
+        padding: 16px;
+        flex-direction: row; /* Cambia a fila para pantallas más grandes */
+    }
+
+    .texto, .imagen {
+        flex: 1; /* Cada parte ocupa un espacio igual */
+        margin: 10; /* Sin márgenes en móviles */
+    }
+
+    .btn {
+        margin:14px;}
+}

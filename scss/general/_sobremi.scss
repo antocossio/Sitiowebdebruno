@@ -1,0 +1,68 @@
+/* header */ 
+
+@import "../general/utilidades/mixin";
+
+
+//estilos de main//
+/* "Css sobre mi" */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $color-fondo; /* Fondo blanco */
+    line-height: 4.6; /* Mejora la legibilidad */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+
+    header {
+        background-color: $color-gris-claro; /* Color del encabezado */
+        padding: 15px 20px; /* Espaciado del encabezado */
+        display: flex; /* Usar Flexbox para la alineación */
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            margin: 0 10px; /* Espaciado entre enlaces */
+            text-decoration: none; /* Sin subrayado en enlaces */
+            color: $color-azul-dos; /* Color de texto de los enlaces */
+
+            &:hover {
+                text-decoration: underline; /* Subrayado en hover */
+            }
+        }
+    }
+}
+
+.container {
+    margin-top: 20px;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // 2 columnas
+        grid-template-rows: repeat(2, 1fr);    // 2 filas
+        gap: 20px;
+        padding: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Una columna en móviles
+        }
+    }
+
+    .image-item2 {
+        background-color: #f4f4f4;
+        border-radius: 30px;
+        padding: 24px;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 15px 0;
+        }
+    }
+}
+

@@ -1,0 +1,597 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* Fondo blanco */
+  line-height: 1.6; /* Mejora la legibilidad */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+header {
+  height: 80px;
+  background-color: #F4F4F4; /* fondo gris claro */
+  padding: 0 32px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+header a {
+  margin: 0 10px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Sin subrayado en enlaces */
+  color: #486284; /* Color de texto de los enlaces */
+}
+
+header a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Mixins */
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .logo img {
+  max-width: 120px;
+  height: auto;
+}
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+header nav a {
+  text-decoration: none;
+  color: #0056b3;
+}
+header nav a:hover {
+  color: #486284;
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+}
+main .row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  main .row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+main .texto {
+  flex: 1;
+}
+main .texto h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+main .texto p {
+  font-size: 16px;
+  color: #0056b3;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+main .imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+main .imagen img {
+  max-width: 100%;
+  height: auto;
+}
+main .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  main .buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+main .btn {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.75rem 1.5rem;
+  background-color: #003d80;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+@media (min-width: 768px) {
+  main .btn {
+    width: auto;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 1.25rem;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+footer h4 {
+  font-weight: bold;
+  color: #486284;
+  margin-bottom: 1rem;
+}
+footer .social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .nav-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  header .nav-container nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .row {
+    text-align: center;
+  }
+  main .imagen {
+    margin-top: 2rem;
+  }
+}
+/* estilo de contactanos */
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  display: flex;
+  padding: 0 16px;
+  color: #333333; /* texto gris oscuro */
+  text-decoration: none;
+}
+
+/* main */
+.container.text-center.mt-5 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 69px 20px;
+  padding-bottom: 32px;
+}
+.container.text-center.mt-5 h1, .container.text-center.mt-5 h2, .container.text-center.mt-5 h3 {
+  color: #003d80;
+  margin-bottom: 0px;
+  font-size: 42px;
+  padding-top: 69px;
+}
+.container.text-center.mt-5 p {
+  color: #003d80;
+  font-size: 20px;
+}
+.container.text-center.mt-5 .buttons {
+  margin-top: 24px; /* Espacio superior para los botones */
+  display: flex; /* Usar Flexbox para centrar botones */
+  justify-content: center; /* Centra los botones */
+}
+.container.text-center.mt-5 .btn {
+  background-color: #003d80; /* Color de fondo azul para los botones */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave */
+  margin-right: 16px; /* Espacio entre botones */
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+  header {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  main {
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .row {
+    padding: 16px;
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .texto, .imagen {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    margin: 10; /* Sin márgenes en móviles */
+  }
+  .btn {
+    margin: 14px;
+  }
+}
+/* estilo de playa */
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  display: flex;
+  padding: 0 16px;
+  color: #333333; /* texto gris oscuro */
+  text-decoration: none;
+}
+
+/* main o contenido */
+.container h1 {
+  font-size: 36px; /* Tamaño del título */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centrado del título */
+}
+.container p {
+  font-size: 16px; /* Tamaño del párrafo */
+  text-align: center; /* Centrado del párrafo */
+}
+.container .row {
+  display: flex; /* Usar Flexbox para la disposición de las columnas */
+  flex-wrap: wrap; /* Permitir que las columnas fluyan en múltiples líneas */
+  justify-content: center; /* Centrar las columnas */
+}
+.container .row .col-md-6 {
+  width: 50%; /* Ancho del 50% para columnas en pantallas medianas */
+  padding: 32px; /* Espacio interno en las columnas */
+}
+.container .row .col-md-6 .image-style3 {
+  background-color: #f4f4f4; /* Color de fondo de los ítems */
+  border: 2px solid #0056b3; /* Borde de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Centrar texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+  transition: transform 0.3s; /* Transición suave en hover */
+}
+.container .row .col-md-6 .image-style3:hover {
+  transform: scale(1.05); /* Efecto de aumento en hover */
+}
+.container .row .col-md-6 .image-style3 img.img-playa {
+  max-width: 100%; /* Asegura que las imágenes sean responsivas */
+  height: auto; /* Mantiene proporciones de la imagen */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+.container .row .col-md-6 .image-style3 h4 {
+  font-size: 24px; /* Tamaño de los títulos en las tarjetas */
+  font-weight: bold; /* Títulos en negrita */
+  margin: 10px 0; /* Espacio vertical alrededor de los títulos */
+}
+.container .row .col-md-6 .image-style3 p {
+  font-size: 16px; /* Tamaño del párrafo dentro de las cards */
+  margin-bottom: 15px; /* Espacio inferior en párrafos */
+}
+.container .row .col-md-6 .image-style3 .btn {
+  background-color: #003d80; /* Color del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Padding del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor */
+  transition: background-color 0.3s; /* Transición suave */
+}
+.container .row .col-md-6 .image-style3 .btn:hover {
+  background-color: #0056b3; /* Color del botón al hacer hover */
+}
+
+footer {
+  text-align: center; /* Alineación centrada en el footer */
+  background-color: #F4F4F4; /* Fondo gris claro */
+  /* Íconos de redes sociales */
+}
+footer .social-icon {
+  width: 30px; /* Tamaño de los íconos */
+  height: 30px;
+  margin: 0 5px; /* Espaciado entre íconos */
+}
+
+@media (min-width: 500px) {
+  header {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  main {
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .row {
+    padding: 16px;
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .texto, .imagen {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    margin: 10; /* Sin márgenes en móviles */
+  }
+  .btn {
+    margin: 14px;
+  }
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  display: flex;
+  padding: 0 16px;
+  color: #333333; /* texto gris oscuro */
+  text-decoration: none;
+}
+
+/* "Css sobre mi" */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* Fondo blanco */
+  line-height: 1.6; /* Mejora la legibilidad */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+}
+body header {
+  background-color: #f4f4f4; /* Color del encabezado */
+  padding: 15px 20px; /* Espaciado del encabezado */
+  display: flex; /* Usar Flexbox para la alineación */
+  justify-content: space-between;
+  align-items: center;
+}
+body header a {
+  margin: 0 10px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Sin subrayado en enlaces */
+  color: #0056b3; /* Color de texto de los enlaces */
+}
+body header a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+}
+
+.container {
+  margin-top: 20px; /* Espacio superior para el contenedor principal */
+  /* Estilo para los ítems de las imágenes */
+  /* Estilos para los botones */
+}
+.container h1 {
+  font-size: 36px; /* Tamaño del título */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+.container h4 {
+  font-size: 24px; /* Tamaño de los títulos en las tarjetas */
+  font-weight: bold; /* Títulos en negrita */
+  margin: 10px 0; /* Espacio vertical alrededor de los títulos */
+}
+.container p {
+  font-size: 16px; /* Tamaño del párrafo */
+  margin-bottom: 20px; /* Espacio inferior en párrafos */
+}
+.container .row {
+  display: flex; /* Usar Flexbox para la disposición de las columnas */
+  flex-wrap: wrap; /* Permitir que las columnas fluyan en múltiples líneas */
+}
+.container .row .image-item {
+  background-color: #f4f4f4; /* Color de fondo de los ítems de la grilla */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  text-align: center; /* Centrar texto en imágenes */
+  margin-bottom: 24px; /* Espacio inferior entre ítems */
+}
+.container .row .image-item .image-style3 {
+  max-width: 100%; /* Asegura que las imágenes sean responsivas */
+  height: auto; /* Mantiene proporciones de la imagen */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+  padding: 16px;
+}
+.container .image-item2 {
+  background-color: #f4f4f4; /* Color de fondo de los ítems de la grilla */
+  border-radius: 30px; /* Bordes redondeados */
+  padding: 24px; /* Espaciado interno */
+  text-align: center; /* Centrar texto en imágenes */
+  margin-bottom: 24px; /* Espacio inferior entre ítems */
+}
+.container .img-fluid {
+  width: 300px; /* Asegura que la imagen sea responsiva */
+  height: 200px; /* Mantiene proporciones de la imagen */
+}
+.container .buttons {
+  margin-top: 24px; /* Espacio superior para los botones */
+  display: flex; /* Usar Flexbox para centrar botones */
+  justify-content: center; /* Centra los botones */
+}
+.container .buttons .btn {
+  background-color: #585c62; /* Color de fondo azul para los botones */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave */
+  margin-right: 16px; /* Espacio entre botones */
+}
+
+/* header */
+/* mis tesoros */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  display: flex;
+  padding: 0 16px;
+  color: #333333; /* texto gris oscuro */
+  text-decoration: none;
+}
+
+/* Contenido Principal */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Cambiar a columna para el contenedor top-level */
+}
+.container h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+.container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.container .row {
+  display: flex; /* Establecer fila para las imágenes */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center;
+}
+.container .row .text-item {
+  flex: 1;
+  margin-right: 20px;
+}
+.container .row .text-item h1 {
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+.container .row .text-item p {
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+.container .row .image-item {
+  flex: 1; /* Tamaño igual para cada imagen */
+  margin: 0 5px;
+}
+.container .row .image-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.container .row .image-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+  header {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  main {
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .row {
+    padding: 16px;
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+  }
+  .texto, .imagen {
+    flex: 1; /* Cada parte ocupa un espacio igual */
+    margin: 10; /* Sin márgenes en móviles */
+  }
+  .btn {
+    margin: 14px;
+  }
+}
+/* Estilos generales del header */
+header {
+  position: relative;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+/* Estilos del botón hamburguesa */
+button#burger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+/* Contenedor de navegación */
+.nav-container {
+  display: block;
+}
+.nav-container nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-container nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.nav-container nav a:hover {
+  color: #666;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  button#burger-menu {
+    display: block;
+  }
+  .nav-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+  }
+  .nav-container nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+  }
+  .nav-container nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  .nav-container nav a:hover {
+    background: #f5f5f5;
+  }
+  /* Clase para mostrar el menú */
+  header.menu-open .nav-container {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
